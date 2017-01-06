@@ -51,7 +51,7 @@ server <- function(input, output){
     mtext("",side=2,line=2.5)
     box() 
     
-    if (!all(is.na( dID$technical_44 ))){ 
+    if (!all(is.na( dID[,input$indicator] ))){ 
       par(new=TRUE) 
       plot(dID$timestamp, dID[,input$indicator], pch=15,  xlab="", ylab="",
            axes=FALSE, type="l", col="blue") 
